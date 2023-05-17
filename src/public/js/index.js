@@ -16,15 +16,25 @@ socket.on('products', (products) => {
   ${products
     .map(
       (product) => `
-    <p>ID: ${product.id}</p>
-    <p>Title: ${product.title}</p>
-    <p>Description: ${product.description}</p>
-    <p>Price: $ ${product.price}</p>
-    <img src='' alt='${product.thumbnail}' />
-    <p>Code: ${product.code}</p>
-    <p>Stock: ${product.stock}</p>
-    <p>Category: ${product.category}</p>
-    <button type="button" class="btn btn-danger " onclick="deleteProduct(${product.id})">X</button>
+      <div class='col-sm-6 mb-3 mb-sm-0'>
+        <div class='card'>
+          <img src='${product.thumbnail}' class='card-img-top' alt='${product.title}' />
+          <div class='card-body'>
+            <h5 class='card-title'>Title: ${product.title}</h5>
+            <p class='card-text'>Description: ${product.description}</p>
+          </div>
+          <ul class='list-group list-group-flush'>
+            <li class='list-group-item'>ID: ${product.id}</li>
+            <li class='list-group-item'>Price: $ ${product.price}</li>
+            <li class='list-group-item'>Code: ${product.code}</li>
+            <li class='list-group-item'>Stock: ${product.stock}</li>
+            <li class='list-group-item'>Category: ${product.category}</li>
+          </ul>
+          <div class='card-body'>
+            <button type="button" class="btn btn-danger " onclick="deleteProduct(${product.id})">Eliminar</button>
+          </div>
+        </div>
+      </div>
 `
     )
     .join('')}`;
