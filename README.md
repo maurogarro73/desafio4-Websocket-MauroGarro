@@ -28,7 +28,7 @@ Este repositorio contiene el código fuente para el Desafío 4, titulado "Motore
    $ npm run dev
 ```
 
-2. Abre tu navegador web y visita `http://localhost:8080/realtimeproducts` o http://localhost:8080/home para ver la aplicación en funcionamiento.
+2. Abre tu navegador web y visita `http://localhost:8080/realtimeproducts` o `http://localhost:8080/home` para ver la aplicación en funcionamiento.
 
 ## Uso
 
